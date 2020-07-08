@@ -8,4 +8,8 @@ public interface IVacanteService {
 
 	List<Vacante> buscarTodo();
 	
+	Vacante findById(Long id);
+	
+	void save(Vacante vacante);
+	
 }

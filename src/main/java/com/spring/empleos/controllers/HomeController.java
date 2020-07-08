@@ -27,18 +27,10 @@ public class HomeController {
 		 * model.addAttribute("fecha", new Date());
 		 */
 
-		String nombre = "Auxiliar contable";
-
-		Date fechaPrueba = new Date();
-
-		double salario = 9000000.0;
-		boolean vigente = true;
-
-		model.addAttribute("nombre", nombre);
-		model.addAttribute("fechaP", fechaPrueba);
-		model.addAttribute("salario", salario);
-		model.addAttribute("vigente", vigente);
-		return "home";
+		List<Vacante> lista = serviceVacantes.buscarTodo();
+		model.addAttribute("vacantes", lista);
+		
+		return "vacantes/listVacantes";
 	}
 
 	@GetMapping("/listado")

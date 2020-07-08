@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.spring.empleos.models.Vacante;
 import com.spring.empleos.service.IVacanteService;
 
 @Controller
@@ -24,7 +25,7 @@ public class CategoriasController {
 
 	// @GetMapping("/create")
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
-	public String crear() {
+	public String crear(Vacante vacante) {
 		return "categorias/formCategorias";
 	}
 
